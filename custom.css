@@ -11210,3 +11210,29 @@ label.user-selector-label+.media.selected-user .media-body {
     background-position: center;
     background-size: 22px 22px;
 }
+
+.container>form>.form-group:has(+ .form-group > label.user-selector-label) .d-flex.flex-row.mt-auto {
+    justify-content: center !important;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container>form>.form-group:has(+ .form-group > label.user-selector-label) {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .container>form>.form-group:has(+ .form-group > label.user-selector-label) .d-flex.flex-row.mt-auto {
+        display: flex !important;
+        /* önemli */
+        justify-content: center !important;
+        /* ortalama */
+        align-items: center !important;
+        width: 100% !important;
+        gap: 16px !important;
+        margin: 0 auto !important;
+        /* ekstra güvenlik */
+    }
+}
